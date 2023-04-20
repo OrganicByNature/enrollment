@@ -1,0 +1,85 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@500;700&family=Poppins:wght@400;700&display=swap');
+
+
+h1, h2, h3{
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 500;
+
+}
+p {
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 500;
+}
+a {
+   text-decoration: none;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   color: #000;
+}
+a:hover{
+   color: #3a5838;
+}
+a.btn {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+}
+li {
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 500;
+}
+
+
+
+.js-reg {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+ }
+.js-md {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+ }
+ .js-bold {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+ }
+ .lora-reg {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+ }
+ .lora-reg-it {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+ }
+ .lora-bold {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+ }
+ .lora-bold-it {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-style: italic;
+ }
+.poppins-reg {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.mnsrt-md {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.mnsrt-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.calendar {
+   color: #617960;
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight:700;
+}
