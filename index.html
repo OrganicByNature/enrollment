@@ -23,7 +23,54 @@
 
     <!-- ======================= PAGE CONTENT ====================================== -->
 
-    <div class="container" style="
+        <!-- This page have duplicated elements that are hidden depending on the mobile/desktop version -->
+    <style>
+      .pack-icon::before {
+        content:url('Shape.png'); /* with class ModalCarrot ??*/
+        position:relative; /*or absolute*/
+        z-index:100000; /*a number that's more than the modal box*/
+        left:-50px;
+        top:10px;
+    }
+      .pack-icon {
+        position: absolute;
+        left:50%;
+        margin-left:-8px;
+        top:-16px;
+    }
+
+      /* mobile */
+    @media only screen and (max-width: 767px) {
+    .mobileView {
+        display: block;
+      }
+    .desktopView {
+        display: none;
+      }
+    .mobile-text-center {
+        text-align:center;
+        padding:30px;
+    }
+    .mobile-text-bigger {
+        font-size: 30px;
+    }
+    }
+      /* desktop */
+    @media only screen and (min-width: 768px) {
+    .mobileView {
+        display: none;
+      }
+    .desktopView {
+        display: block;
+      }
+    .mobile-text-center {
+        text-align: left;
+    }
+      }
+    </style>
+    
+
+    <div class="container desktopView" style="
             background-image: url('enroll-bg.png');
             max-width:100%;
             background-position: bottom;
@@ -34,21 +81,22 @@
         <div>
             <div class="text-center" >
                 <div class="row pt-3" style="background: white;">
-                    <h1 style="color: #116c68"><em>Say <span style="color: #bbbd7a">YES</span> to the lifestyle you desire</em></h1>
-                    <p class="container">Enroll today as a brand partner and imagine what it feels like to collect up to $3500* in Fast Start bonuses. The more you share the more potential to earn while helping others experience true transformation.</p>    
+                    <div class="col-10 mx-auto"><h1 class="lora-bold" style="color: #116c68; font-size:55px">Say <em><span style="color: #bbbd7a">YES</span></em> to the lifestyle you desire</h1></div>
+                    <div><br></div>
+                    <div class="mx-auto"><p class="container">Enroll today as a brand partner and imagine what it feels like to collect up to $3500* in Fast Start bonuses.<br><br>The more you share the more potential to earn while helping others experience true transformation.</p> </div>       
                </div>
-               <div class="row" style="background-image: linear-gradient(white, transparent);">
+               <div class="row " style="background-image: linear-gradient(white, transparent);">
                 <br><br><br>
                </div>
+
                 <div class="row">
-                    <div class="col">
-    
-                    </div>
+                    <div class="col"></div>
+
                     <div class="col-xs-5 col-sm-5 col-md-4 col-lg-3">
                         <div class="p-5" style="background-color: #E4EAFF; border-radius: 150px 150px 0 0 ">
-                            <h2 class="pt-5">Most Popular<br>Enrollment<br>Option</h2>
+                            <h2 class="pt-5 lora-bold">Most Popular<br>Enrollment<br>Option</h2>
                             <br>
-                            <p>Lifestyle Subscription + Free Launch Pack ($199 Value)</p>
+                            <p><strong>Lifestyle Subscription + Free Launch Pack ($199 Value)</strong></p>
                             <br>
                             <!-- Opens Cart with the choices (the grid on  the ULTLifestyle.com page) -->
                             <a href="#" class="btn" style="background-color: #397168; color: white">Enroll Now</a>
@@ -59,7 +107,7 @@
             </div>
             <div class="text-left" style="background-color:#ccdfb4; border-radius: 80px;">
                 <div class="p-4" style="max-width:1200px; margin:auto;">
-                <h3>Your Launch Pack Includes:</h3>
+                <h3 class="lora-bold">Your Launch Pack Includes:</h3>
                 <div class="row">
                     <div class="col">
                         <ul>
@@ -89,7 +137,81 @@
 
     </div>
 
-    <div  style="background-color:#E4EAFF;">
+    <div class="text-center mobileView" >
+        <div class="container m-0 mx-auto" style="max-width: fit-content;">
+            <div class="row pt-3" style="background: white;">
+                <div class="col-10 mx-auto"><h1 class="lora-bold" style="color: #116c68; font-size:55px">Say <em><span style="color: #bbbd7a">YES</span></em> to the lifestyle you desire</h1></div>
+                <div><br></div>
+                <div class="mx-auto"><p class="container">Enroll today as a brand partner and imagine what it feels like to collect up to $3500* in Fast Start bonuses.<br><br>The more you share the more potential to earn while helping others experience true transformation.</p> </div>       
+           </div>
+           <!-- <div class="row" style="background-image: linear-gradient(white, transparent);">
+            <br><br><br>
+           </div> -->
+    
+            <div class="row">
+                <div class="col"></div>
+    
+    
+                <div class="p-0" style="position: relative;
+                            text-align: center;
+                            color: white;">
+                    <img class="img-fluid" src="enroll-bg.png" style="filter: brightness(70%);" />
+                    <div style="    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    width: 100%;">
+                        <h1 class="lora-bold">The Most Popular<br>Enrollment Option</h1>
+                    </div>
+                </div>
+                
+                <div class="p-0">
+                    <div class="p-3" style="background-color: #E4EAFF;">
+                        <p class="pt-4"><strong>Lifestyle Subscription +<br>Free Launch Pack ($199 Value)</strong></p>
+                        <br>
+                        <!-- Opens Cart with the choices (the grid on  the ULTLifestyle.com page) -->
+                        <a href="#" class="btn" style="background-color: #397168; color: white">Enroll Now</a>
+
+                        <div class="text-left mt-5" style="background-color:#ccdfb4; border-radius: 50px;">
+                            <div class="p-4" style="max-width:1200px; margin:auto;">
+                            <h3 class="lora-bold">Your Launch Pack Includes:</h3>
+                            <div class="row mx-auto p-3">
+                                <div class="col-12">
+                                    <ul class="p-2" style="text-align:left;">
+                                        <li>Unlimited $50 Gift Codes</li>
+                                        <li>Online Superfoods Store</li>
+                                        <li>Digital Marketing & Training Flyers</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <ul class="p-2" style="text-align:left;">
+                                        <li>DREAMS Subscription with Phone App& Upgraded Personal Back Office</li>
+                                        <li>Weekly Virtual Trainings</li>
+                                        <li>Business & Personal Coaching</li>
+                                    </ul>
+                                </div>
+                                <div class="col-12">
+                                    <ul  class="p-2" style="text-align:left;">
+                                    <li>Weekly AND Monthly paychecks</li>
+                                    <li>Eligible for $3500* in F.A.S.T. Start Bonuses</li>
+                                    <li>Eligible for the Ultimate Business Transformation Promo*</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                
+                <div class="col-1"></div>
+            </div> 
+        </div>
+    </div>
+
+    <div style="background-color:#E4EAFF;">
         <br>
     </div>
 
@@ -105,9 +227,63 @@
         color: black;">
 
         <div style="max-width:1200px; margin:auto;">
-            <h1>Other Ways to Enroll</h1>
+            <h1 class="lora-bold desktopView text-left">Other Ways to Enroll</h1>
+            <h1 class="lora-bold mobileView text-center">Other Ways to Enroll</h1>
 
-            <table class="table table-borderless">
+            <div class="container">
+                <br><br>
+                    <div class="row">
+                        <div class="col-12 col-md-4 p-3 mobile-text-bigger">
+                            <div class="row">
+                                <div class="d-flex align-items-start justify-content-center"><img src="Shape.png" alt="" style="width:40px; margin: 0 30px;"><p><strong>Featured Pack +<br>Free Launch Pack</strong></p></div>
+                            </div>   
+                        </div>
+                        <div class="col-12 col-md-4 p-3">
+                            <div class="row">
+                                <ul style="width: fit-content; margin: auto;"><li>Choose a featured pack with a<br>variety of superfoods products</li></ul></div>
+                        </div>
+                        <div class="col-12 col-md-4 p-3 text-center">
+                            <a href="#" class="btn" style="background-color: #397168; color: white">Enroll Now</a>
+                        </div>
+                    </div>
+
+                    <div class="p-3"><br></div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4 p-3 mobile-text-bigger">
+                            <div class="row">
+                                <div class="d-flex align-items-start justify-content-center"><img src="Shape.png" alt="" style="width:40px; margin: 0 30px;"><p><strong>$199 Launch Pack </strong><br>(no product)</p></div>
+                            </div>   
+                        </div>
+                        <div class="col-12 col-md-4 p-3">
+                            <div class="row">
+                                <ul style="width: fit-content; margin: auto;"><li>No Product included</li></ul></div>
+                        </div>
+                        <div class="col-12 col-md-4 p-3 text-center">
+                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modal1" style="background-color: #397168; color: white">Enroll Now</a>
+                        </div>
+                    </div>
+                    <div class="p-3"><br></div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-4 p-3 mobile-text-bigger">
+                            <div class="row">
+                                <div class="d-flex align-items-start justify-content-center"><img src="Shape.png" alt="" style="width:40px; margin: 0 30px;"><p><strong>$49.95 Basic Pack</strong></p></div>
+                            </div>   
+                        </div>
+                        <div class="col-12 col-md-4 p-3">
+                            <div class="row">
+                                <ul style="width: fit-content; margin: auto;"><li>No Product included</li>
+                                <li>Limit 5 $50 Gift Codes</li><li>Access to Marketing &</li><li>Training Materials</li></ul></div>
+                        </div>
+                        <div class="col-12 col-md-4 p-3 text-center">
+                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#Modal2" style="background-color: #397168; color: white">Enroll Now</a>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <!-- <table class="table table-borderless">
                 <tbody>
                     <tr>
                         <td>
@@ -152,7 +328,7 @@
                     </tr>
                 </tbody>
                 
-            </table>
+            </table> -->
         </div>
     </div>
 
@@ -215,10 +391,14 @@
 
     <!-- View Compensation plan -->
     <div class="container p-5 m-0">
-        <a href="" class="btn" style="background-color: #8CA3F2; color: white;">View Compensation Plan</a>
+        <a href="https://www.puriumcorporate.com/puriumMedia/wp-content/uploads/2023/03/CompensationPlan-RD0323.pdf" class="btn" style="background-color: #8CA3F2; color: white;">View Compensation Plan</a>
         <br><br>
         <p><strong>*These figures should not be considered as guarantees or projections of your actual earnings or profits. Any representation or guarantee of earnings would be misleading. Success with Purium results only from successful sales efforts, which require hard work, diligence, leadership. Your success will depend upon how effectively you exercise these qualities.</strong></p>
         <p>*requires an active smart order subscription (minimum 50 BV).</p>
+    </div>
+
+    <div style="background-color:#CCDFB4;">
+        <br>
     </div>
 
     <!-- =========================================================================== -->
